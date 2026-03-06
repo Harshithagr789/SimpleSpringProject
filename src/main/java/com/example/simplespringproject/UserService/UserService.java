@@ -1,16 +1,20 @@
 package com.example.simplespringproject.UserService;
 
+import com.example.simplespringproject.Exception.UserException;
 import com.example.simplespringproject.UserRepository.UserRepository;
 import com.example.simplespringproject.User.User;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 @Service
 public class UserService {
 
     private final UserRepository userRepository;
 
+    private static final Logger log =
+            LoggerFactory.getLogger(UserService.class);
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -20,11 +24,16 @@ public class UserService {
     }
 
     public Mono<User> getUserById(Integer id) {
-        return userRepository.findById(id);
+        return userRepository.findById(id).switchIfEmpty(Mono.error(new UserException(id)));
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c34a4f4 (Added validation, global exception handling and logging)
     public Mono<User> createUser(User user) {
-        user.setId(null);  // Force INSERT
+        log.info("Creating user with email: {}", user.getEmail());
+        user.setId(null);
         return userRepository.save(user);
     }
 

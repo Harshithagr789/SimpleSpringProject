@@ -1,0 +1,7 @@
+2026-03-06T10:39:04.004+05:30  INFO 22296 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 22296 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T10:39:04.018+05:30 DEBUG 22296 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T10:39:04.020+05:30  INFO 22296 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T10:39:05.319+05:30  INFO 22296 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-03-06T10:39:05.657+05:30  INFO 22296 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 328 ms. Found 1 R2DBC repository interface.
+2026-03-06T10:39:08.402+05:30  INFO 22296 --- [SimpleSpringProject] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2026-03-06T10:39:08.418+05:30  INFO 22296 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Started SimpleSpringProjectApplication in 7.554 seconds (process running for 34.693)

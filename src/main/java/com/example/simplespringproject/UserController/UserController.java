@@ -5,7 +5,7 @@ import com.example.simplespringproject.User.User;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
+import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -22,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping
-    public Mono<User> createUser(@RequestBody User user) {
+    public Mono<User> createUser(@Valid @RequestBody User user) {
         return userService.createUser(user);
     }
 
@@ -33,7 +33,7 @@ public class UserController {
 
     @PutMapping("/{id}")
     public Mono<User> updateUser(@PathVariable Integer id,
-                                 @RequestBody User user) {
+                                 @Valid @RequestBody User user) {
         return userService.updateUser(id, user);
     }
 
