@@ -5,3 +5,4 @@
 2026-03-06T10:39:05.657+05:30  INFO 22296 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 328 ms. Found 1 R2DBC repository interface.
 2026-03-06T10:39:08.402+05:30  INFO 22296 --- [SimpleSpringProject] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
 2026-03-06T10:39:08.418+05:30  INFO 22296 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Started SimpleSpringProjectApplication in 7.554 seconds (process running for 34.693)
+2026-03-06T10:40:53.035+05:30  INFO 22296 --- [SimpleSpringProject] [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 683 ms
