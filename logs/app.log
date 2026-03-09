@@ -6,3 +6,512 @@
 2026-03-06T10:39:08.402+05:30  INFO 22296 --- [SimpleSpringProject] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
 2026-03-06T10:39:08.418+05:30  INFO 22296 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Started SimpleSpringProjectApplication in 7.554 seconds (process running for 34.693)
 2026-03-06T10:40:53.035+05:30  INFO 22296 --- [SimpleSpringProject] [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 683 ms
+2026-03-06T12:25:41.297+05:30  INFO 31460 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 31460 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T12:25:41.300+05:30 DEBUG 31460 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T12:25:41.302+05:30  INFO 31460 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T12:25:42.087+05:30  WARN 31460 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-06T12:25:42.100+05:30  INFO 31460 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T12:25:42.148+05:30 ERROR 31460 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-06T12:30:44.142+05:30  INFO 33756 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 33756 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T12:30:44.149+05:30 DEBUG 33756 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T12:30:44.151+05:30  INFO 33756 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T12:30:44.915+05:30  WARN 33756 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-06T12:30:44.927+05:30  INFO 33756 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T12:30:44.952+05:30 ERROR 33756 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-06T12:32:58.776+05:30  INFO 28004 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 28004 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T12:32:58.779+05:30 DEBUG 28004 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T12:32:58.781+05:30  INFO 28004 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T12:32:59.448+05:30  WARN 28004 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-06T12:32:59.459+05:30  INFO 28004 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T12:32:59.485+05:30 ERROR 28004 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-06T12:38:39.483+05:30  INFO 18884 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 18884 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T12:38:39.485+05:30 DEBUG 18884 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T12:38:39.486+05:30  INFO 18884 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T12:38:40.159+05:30  WARN 18884 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-06T12:38:40.170+05:30  INFO 18884 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T12:38:40.198+05:30 ERROR 18884 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-06T12:38:55.567+05:30  INFO 33564 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 33564 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T12:38:55.571+05:30 DEBUG 33564 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T12:38:55.572+05:30  INFO 33564 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T12:38:56.226+05:30  WARN 33564 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-06T12:38:56.239+05:30  INFO 33564 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T12:38:56.263+05:30 ERROR 33564 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-06T12:43:11.639+05:30  INFO 10852 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 10852 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T12:43:11.643+05:30 DEBUG 10852 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T12:43:11.645+05:30  INFO 10852 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T12:43:12.518+05:30  WARN 10852 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-06T12:43:12.534+05:30  INFO 10852 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T12:43:12.570+05:30 ERROR 10852 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-06T14:48:58.202+05:30  INFO 27696 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 27696 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T14:48:58.204+05:30 DEBUG 27696 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T14:48:58.206+05:30  INFO 27696 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T14:48:58.790+05:30  INFO 27696 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-03-06T14:48:58.958+05:30  INFO 27696 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 1 R2DBC repository interface.
+2026-03-06T14:49:00.207+05:30  INFO 27696 --- [SimpleSpringProject] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2026-03-06T14:49:00.226+05:30  INFO 27696 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Started SimpleSpringProjectApplication in 2.403 seconds (process running for 2.824)
+2026-03-06T14:50:12.172+05:30  INFO 5156 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 5156 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T14:50:12.173+05:30 DEBUG 5156 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T14:50:12.174+05:30  INFO 5156 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T14:50:12.519+05:30  WARN 5156 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-06T14:50:12.527+05:30  INFO 5156 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T14:50:12.549+05:30 ERROR 5156 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-06T14:55:35.609+05:30  INFO 34320 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 34320 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T14:55:35.610+05:30 DEBUG 34320 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T14:55:35.611+05:30  INFO 34320 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T14:55:36.138+05:30  INFO 34320 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-03-06T14:55:36.250+05:30  INFO 34320 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 1 R2DBC repository interface.
+2026-03-06T14:55:39.246+05:30  WARN 34320 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-06T14:55:39.256+05:30  INFO 34320 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-06T14:55:39.269+05:30 ERROR 34320 --- [SimpleSpringProject] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-03-06T15:00:19.126+05:30  INFO 23692 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 23692 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-06T15:00:19.127+05:30 DEBUG 23692 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-06T15:00:19.128+05:30  INFO 23692 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T15:00:19.558+05:30  INFO 23692 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-03-06T15:00:19.640+05:30  INFO 23692 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 1 R2DBC repository interface.
+2026-03-06T15:00:20.539+05:30  INFO 23692 --- [SimpleSpringProject] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2026-03-06T15:00:20.550+05:30  INFO 23692 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Started SimpleSpringProjectApplication in 1.706 seconds (process running for 2.059)
+2026-03-06T15:01:11.801+05:30  INFO 23692 --- [SimpleSpringProject] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 234 ms
+2026-03-09T10:48:00.112+05:30  INFO 35400 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 35400 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-09T10:48:00.150+05:30 DEBUG 35400 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-09T10:48:00.152+05:30  INFO 35400 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-09T10:48:01.099+05:30  WARN 35400 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+2026-03-09T10:48:01.116+05:30  INFO 35400 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-09T10:48:01.163+05:30 ERROR 35400 --- [SimpleSpringProject] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration]: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:321) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.simplespringproject.SimpleSpringProjectApplication.main(SimpleSpringProjectApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'DB_URL' in value "${DB_URL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:80) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:61) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:552) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.hasPoolUrl(ConnectionFactoryConfigurations.java:172) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:156) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.5.jar:3.2.5]
+	... 24 common frames omitted
+
+2026-03-09T14:08:15.020+05:30  INFO 33872 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 33872 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-09T14:08:15.023+05:30 DEBUG 33872 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-09T14:08:15.025+05:30  INFO 33872 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-09T14:08:16.008+05:30  INFO 33872 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-03-09T14:08:16.232+05:30  INFO 33872 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 218 ms. Found 1 R2DBC repository interface.
+2026-03-09T14:08:22.030+05:30  WARN 33872 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-09T14:08:22.090+05:30  INFO 33872 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-09T14:08:22.137+05:30 ERROR 33872 --- [SimpleSpringProject] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-03-09T14:13:07.322+05:30  INFO 10696 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 10696 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-09T14:13:07.325+05:30 DEBUG 10696 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-09T14:13:07.327+05:30  INFO 10696 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-09T14:13:09.177+05:30  INFO 10696 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-03-09T14:13:09.588+05:30  INFO 10696 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 397 ms. Found 1 R2DBC repository interface.
+2026-03-09T14:13:15.764+05:30  WARN 10696 --- [SimpleSpringProject] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-09T14:13:15.821+05:30  INFO 10696 --- [SimpleSpringProject] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-09T14:13:15.870+05:30 ERROR 10696 --- [SimpleSpringProject] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-03-09T14:15:06.682+05:30  INFO 14768 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Starting SimpleSpringProjectApplication using Java 25.0.2 with PID 14768 (C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject\target\classes started by Harshitha.GR in C:\Users\Harshitha.GR\IdeaProjects\SimpleSpringProject)
+2026-03-09T14:15:06.685+05:30 DEBUG 14768 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-09T14:15:06.687+05:30  INFO 14768 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-09T14:15:07.861+05:30  INFO 14768 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-03-09T14:15:08.250+05:30  INFO 14768 --- [SimpleSpringProject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 376 ms. Found 1 R2DBC repository interface.
+2026-03-09T14:15:11.961+05:30  INFO 14768 --- [SimpleSpringProject] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8082
+2026-03-09T14:15:12.017+05:30  INFO 14768 --- [SimpleSpringProject] [main] c.e.s.SimpleSpringProjectApplication     : Started SimpleSpringProjectApplication in 6.335 seconds (process running for 7.137)
+2026-03-09T14:24:32.473+05:30  INFO 14768 --- [SimpleSpringProject] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 739 ms
+2026-03-09T14:24:41.197+05:30  INFO 14768 --- [SimpleSpringProject] [reactor-http-nio-6] c.e.s.UserService.UserService            : Creating user with email: string

@@ -27,10 +27,7 @@ public class UserService {
         return userRepository.findById(id).switchIfEmpty(Mono.error(new UserException(id)));
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c34a4f4 (Added validation, global exception handling and logging)
     public Mono<User> createUser(User user) {
         log.info("Creating user with email: {}", user.getEmail());
         user.setId(null);
